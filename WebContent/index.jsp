@@ -11,7 +11,14 @@
 			<jsp:param value="6" name="navbar"/>
 			<jsp:param value="5" name="profile"/>
 		</jsp:include>
-		<h2>N3C Renal Homepage</h2>
+		<div class="main-block">
+			<div class="block">
+				<strapi:tenantProfiles ID="5">
+					<h2><strapi:tenantProfilesLabel /></h2>
+					<util:markdown2html><strapi:tenantProfilesDescription /></util:markdown2html>
+				</strapi:tenantProfiles>
+			</div>
+		</div>
 	</div>
 	<jsp:include page="footer.jsp" />
 </body>
